@@ -31,10 +31,12 @@ End the session — you should hear the chime.
 
 ## Development
 
-Clone the repo and add it as a local marketplace:
+Clone the repo and install dev dependencies (this also activates the pre-commit hook):
 
 ```bash
 git clone https://github.com/wozniakpl/claude-chimes.git
+cd claude-chimes
+pnpm install
 ```
 
 Then in Claude Code, point the marketplace at the local clone instead of the GitHub shortcode:
