@@ -1,0 +1,11 @@
+{
+  "name": "claude-chimes",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "biome check plugins"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  }
+}
