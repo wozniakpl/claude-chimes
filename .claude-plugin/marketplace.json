@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-chimes",
+  "description": "Self-hosting marketplace for the claude-chimes plugin.",
+  "owner": {
+    "name": "Bartosz Wozniak"
+  },
+  "plugins": [
+    {
+      "name": "claude-chimes",
+      "description": "Plays a unique 3-note ascending chime when a Claude Code session stops, seeded by session ID.",
+      "author": {
+        "name": "Bartosz Wozniak"
+      },
+      "category": "fun",
+      "source": "./plugins/chimes"
+    }
+  ]
+}

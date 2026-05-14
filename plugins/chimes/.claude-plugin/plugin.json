@@ -1,0 +1,9 @@
+{
+  "name": "claude-chimes",
+  "description": "Plays a unique 4-note chime when a Claude Code session stops. Notes are seeded by the session ID so each session has its own signature.",
+  "author": {
+    "name": "Bartosz Wozniak"
+  },
+  "homepage": "https://github.com/wozniakpl/claude-chimes",
+  "repository": "https://github.com/wozniakpl/claude-chimes"
+}
