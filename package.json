@@ -12,5 +12,8 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "simple-git-hooks": "^2.11.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@biomejs/biome", "simple-git-hooks"]
   }
 }
