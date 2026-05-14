@@ -15,5 +15,6 @@ jobs:
         with:
           node-version: lts/*
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install
+      - run: git diff --exit-code pnpm-lock.yaml
       - run: pnpm run lint
