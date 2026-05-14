@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 ${CLAUDE_PLUGIN_ROOT}/hooks/play_chime.py"
+            "command": "node ${CLAUDE_PLUGIN_ROOT}/hooks/play_chime.js"
           }
         ]
       }
