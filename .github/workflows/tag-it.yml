@@ -21,4 +21,4 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           create-release: 'true'
-          pre-release-command: npm version $NEW_VERSION --no-git-tag-version
+          pre-release-command: npm version $NEW_VERSION --no-git-tag-version --no-package-lock
