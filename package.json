@@ -1,0 +1,15 @@
+{
+  "name": "claude-chimes",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "biome check plugins",
+    "prepare": "git config core.hooksPath .githooks"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@biomejs/biome"]
+  }
+}
