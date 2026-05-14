@@ -1,11 +1,12 @@
 lockfileVersion: '9.0'
 
+onlyBuiltDependencies:
+  - '@biomejs/biome'
+  - simple-git-hooks
+
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
-  onlyBuiltDependencies:
-    - '@biomejs/biome'
-    - simple-git-hooks
 
 importers:
 
