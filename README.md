@@ -4,8 +4,8 @@ A tiny Claude Code plugin that plays a unique 4-note chime when a session stops.
 
 - Range: **E4 (329.6 Hz) → E6 (1318.5 Hz)** — 2 octaves, 25 notes in equal temperament (A4 = 440 Hz reference: `440 · 2^(n/12)`)
 - 4 distinct notes in a hash-derived order
-- Cross-platform: macOS (`afplay`), Windows (`winsound`), Linux (`paplay` / `aplay` / `play` / `ffplay`)
-- Stdlib-only Python — no pip install
+- Cross-platform: macOS (`afplay`), Windows (`[Console]::Beep` via PowerShell), Linux (`paplay` / `aplay` / `play` / `ffplay`)
+- Pure Node.js — no Python required
 
 ## Install
 
@@ -27,7 +27,7 @@ End the session — you should hear the chime.
 
 ## Requirements
 
-- Python 3 on `$PATH` (the hook runs `python3`)
+- Node.js (bundled with Claude Code — no separate install needed)
 - A working audio output device
 - On Linux, one of `paplay`, `aplay`, `play`, or `ffplay`
 
