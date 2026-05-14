@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "claude-chimes",
-      "description": "Plays a unique 3-note ascending chime when a Claude Code session stops, seeded by session ID.",
+      "description": "Plays a unique 4-note chime when a Claude Code session stops, seeded by session ID.",
       "author": {
         "name": "Bartosz Wozniak"
       },
