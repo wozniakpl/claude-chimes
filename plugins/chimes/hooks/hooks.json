@@ -1,14 +1,14 @@
 {
-  "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node ${CLAUDE_PLUGIN_ROOT}/hooks/play_chime.js"
-          }
-        ]
-      }
-    ]
-  }
+	"hooks": {
+		"Stop": [
+			{
+				"hooks": [
+					{
+						"type": "command",
+						"command": "node ${CLAUDE_PLUGIN_ROOT}/hooks/play_chime.js"
+					}
+				]
+			}
+		]
+	}
 }

@@ -1,0 +1,30 @@
+name: Tag It
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  tag-it:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: wozniakpl/tag-it@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          create-release: 'true'
+          pre-release-command: >-
+            node -e "
+              const fs = require('node:fs');
+              const p = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+              p.version = process.env.NEW_VERSION;
+              fs.writeFileSync('package.json', JSON.stringify(p, null, 2) + '\n');
+            "
