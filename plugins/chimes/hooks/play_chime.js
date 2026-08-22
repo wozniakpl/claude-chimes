@@ -210,8 +210,14 @@ function play(wavPath) {
 		// SoundPlayer sends the rendered PCM to the normal audio device, so both
 		// the volume setting and the Windows mixer apply to it. The old
 		// [Console]::Beep path drove the system beep, which has no volume at all.
+		//
+		// This has to be synchronous. A detached spawn gets DETACHED_PROCESS, and
+		// PowerShell's ConsoleHost will not start without a console: it exits 0
+		// without playing anything. Spawning it attached fixes that, but then the
+		// playback dies the moment this process exits. Waiting is the only shape
+		// that reliably reaches the speakers, and the chime is only ~0.5s long.
 		const escaped = wavPath.replace(/'/g, "''");
-		const child = spawn(
+		spawnSync(
 			"powershell",
 			[
 				"-NoProfile",
@@ -219,9 +225,8 @@ function play(wavPath) {
 				"-Command",
 				`(New-Object System.Media.SoundPlayer '${escaped}').PlaySync()`,
 			],
-			{ stdio: "ignore", detached: true, windowsHide: true },
+			{ stdio: "ignore", windowsHide: true },
 		);
-		child.unref();
 	} else if (process.platform === "darwin") {
 		const child = spawn("afplay", [wavPath], {
 			stdio: "ignore",
